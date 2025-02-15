@@ -5,7 +5,7 @@ class User:
         self._email = None
         self._password = None
         self._date_of_birth = None
-        self._phone = None
+        # self._phone = None
 
     @property
     def first_name(self):
@@ -47,10 +47,10 @@ class User:
     def date_of_birth(self, value):
         self._date_of_birth = value
 
-    @property
-    def phone(self):
-        return self._phone
-
-    @phone.setter
-    def phone(self, value):
-        self._phone = value
+    # @property
+    # def phone(self):
+    #     return self._phone
+    #
+    # @phone.setter
+    # def phone(self, value):
+    #     self._phone = value
