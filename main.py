@@ -3,6 +3,22 @@ from student import Student
 from teacher import Teacher
 from lesson import Lesson
 
+lesson_lst = []
+account_lst = []
+
+
+def registration(first_name, last_name, email, password, date_of_birth, phone, name):
+    new_id = UserInfo()
+    new_id.last_name = last_name
+    new_id.first_name = first_name
+    new_id.phone = phone
+    new_id.email = email
+    new_id.password = password
+    new_id.date_of_birth = date_of_birth
+    new_id.name = name
+
+    account_lst.append(new_id)
+
 
 def add_lesson(lesson, student):  # добавить урок в список
     student.lst.append(lesson)
@@ -18,10 +34,12 @@ def delete_lesson(lesson, student):  # удалить урок из списка
 
 def add_lesson_teacher(lesson, teacher):  # добавить урок(функция учителя)
     teacher.lst_lesson.append(lesson)
+    lesson_lst.append(lesson)
 
 
 def delete_lesson_teacher(lesson, teacher):  # удалить урок
     teacher.lst_lesson.remove(lesson)
+    lesson_lst.remove(lesson)
 
 
 s1 = Student()  # дальше идут проверки

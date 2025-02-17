@@ -6,6 +6,7 @@ class UserInfo:
         self._password = None
         self._date_of_birth = None
         self._phone = None
+        self._name = None
 
     @property
     def first_name(self):
@@ -54,3 +55,11 @@ class UserInfo:
     @phone.setter
     def phone(self, value):
         self._phone = value
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
