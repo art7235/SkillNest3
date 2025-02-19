@@ -16,8 +16,8 @@ def registration(first_name, last_name, email, password, date_of_birth, phone, n
     new_id.password = password
     new_id.date_of_birth = date_of_birth
     new_id.name = name
-
-    account_lst.append(new_id)
+    if not new_id in account_lst:
+        account_lst.append(new_id)
 
 
 def add_lesson(lesson, student):  # добавить урок в список
