@@ -16,8 +16,11 @@ def registration(first_name, last_name, email, password, date_of_birth, phone, n
     new_id.password = password
     new_id.date_of_birth = date_of_birth
     new_id.name = name
-    if not new_id in account_lst:
-        account_lst.append(new_id)
+    for i in account_lst:
+        if new_id.name == i.name:
+            return "такое имя уже существует"
+    account_lst.append(new_id)
+    return "Регистрация успешна"
 
 
 def add_lesson(lesson, student):  # добавить урок в список
