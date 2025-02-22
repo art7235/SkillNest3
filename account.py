@@ -1,4 +1,4 @@
-class User:
+class UserInfo:
     def __init__(self):
         self._first_name = None
         self._last_name = None
@@ -6,6 +6,7 @@ class User:
         self._password = None
         self._date_of_birth = None
         self._phone = None
+        self._name = None
 
     @property
     def first_name(self):
@@ -37,7 +38,7 @@ class User:
 
     @password.setter
     def password(self, value):
-        self._password = value  # Здесь должен быть хешированный пароль
+        self._password = value
 
     @property
     def date_of_birth(self):
@@ -54,3 +55,11 @@ class User:
     @phone.setter
     def phone(self, value):
         self._phone = value
+
+    @property
+    def name(self):
+        return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
